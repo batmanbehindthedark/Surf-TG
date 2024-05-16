@@ -65,7 +65,7 @@ async def logout_route(request):
 async def create_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
     data = await request.post()
     folderName = data.get('folderName')
     thumbnail = data.get('thumbnail')
@@ -82,7 +82,7 @@ async def create_route(request):
 async def delete_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
     data = await request.json()
     id = data.get('delete_id')
     parent = data.get('parent')
@@ -98,7 +98,7 @@ async def delete_route(request):
 async def editFolder_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
     data = await request.post()
     folderName = data.get('folderName')
     thumbnail = data.get('thumbnail')
@@ -117,7 +117,7 @@ async def editFolder_route(request):
 async def editPost_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
     data = await request.post()
     fileName = data.get('fileName')
     thumbnail = data.get('filethumbnail')
@@ -136,7 +136,7 @@ async def editPost_route(request):
 async def searchDbFolder_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
     query = request.query.get('query', '')
     folder_names = await db.search_DbFolder(query)
     return web.json_response(folder_names)
@@ -180,7 +180,7 @@ async def send_route(request):
 async def reload_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
 
     chat_id = request.query.get('chatId', '')
     if chat_id == 'home':
@@ -195,7 +195,7 @@ async def reload_route(request):
 async def editConfig_route(request):
     session = await get_session(request)
     if (username := session.get('user')) != Telegram.ADMIN_USERNAME:
-        return web.json_response({'msg': 'Who the hell you are'})
+        return web.json_response({'msg': 'Ewadra Puka Nuvvu'})
     data = await request.post()
     channel = data.get('channel')
     theme = data.get('theme')
